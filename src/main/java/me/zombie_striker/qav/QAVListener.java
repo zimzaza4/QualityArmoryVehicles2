@@ -46,7 +46,7 @@ public class QAVListener implements Listener {
 
 		if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			Main.DEBUG("Player is interacting.");
-			VehicleEntity ve = QualityArmoryVehicles.getVehiclePlayerLookingAt(e.getPlayer());
+			VehicleEntity ve = QualityArmoryVehicles.getVehicleNearest(e.getPlayer().getLocation(), 5);
 			if (ve == null) {
 				return;
 			}

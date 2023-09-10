@@ -16,7 +16,7 @@ repositories {
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://jitpack.io")
-    maven("https://repo.viaversion.com")
+    // maven("https://repo.viaversion.com")
     maven("https://repo.dmulloy2.net/nexus/repository/public/")
     maven("https://repo.citizensnpcs.co/")
     maven("https://mvn.lumine.io/repository/maven-public/") {
@@ -24,7 +24,7 @@ repositories {
             artifact()
         }
     }
-    maven("https://repo.codemc.io/repository/maven-public/") {
+    maven("https://repo.codemc.org/repository/maven-public/") {
         metadataSources {
             artifact()
         }
@@ -35,7 +35,7 @@ dependencies {
     // Libraries
     implementation("com.github.cryptomorin:XSeries:9.4.0")
     implementation("net.jodah:expiringmap:0.5.10")
-    implementation("org.codemc.worldguardwrapper:worldguardwrapper:1.2.0-SNAPSHOT")
+    implementation("org.codemc.worldguardwrapper:worldguardwrapper:1.2.1-SNAPSHOT")
     implementation("dev.triumphteam:triumph-gui:3.1.5")
     compileOnly("org.jetbrains:annotations:24.0.1")
 
@@ -44,7 +44,7 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.18-R0.1-SNAPSHOT")
 
     // Compatibilities
-    compileOnly("us.myles:viaversion:3.2.1")
+    // compileOnly("us.myles:viaversion:3.2.1")
     compileOnly("com.comphenix.protocol:ProtocolLib:5.0.0")
     compileOnly("me.zombie_striker:QualityArmory:2.0.7")
     compileOnly("com.github.TownyAdvanced:Towny:0.99.0.11")

@@ -148,6 +148,20 @@ public class QualityArmoryVehicles {
         return null;
     }
 
+    public static VehicleEntity getVehicleNearest(Location loc, int limit) {
+        double min =  Double.MAX_VALUE;
+        VehicleEntity nearest = null;
+        for (VehicleEntity ve : Main.vehicles) {
+            double distance = ve.getDriverSeat().getLocation().distance(loc);
+
+            if (distance < min && distance < limit) {
+                min = distance;
+                nearest = ve;
+            }
+        }
+        return nearest;
+    }
+
 
     public static AbstractVehicle getVehicle(String name) {
         for (AbstractVehicle e : Main.vehicleTypes) {
